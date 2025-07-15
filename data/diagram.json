@@ -1,0 +1,309 @@
+{
+  "nodes": [
+    {
+      "id": "node_0",
+      "type": "main",
+      "name": "main",
+      "description": "You are an intelligent assistant with access to processing image, load data, web search and mathematical capabilities. try to breakdown mathematical operations then call functions . for example (3+7)9 means add [3,7] then multiply by 9. \nimportant : \n- do not modify promt when calling function.\n- use <function> </function> when calls functions.\n- However, question that is not related to above function, answer it yourself.",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "OllamaHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler"
+        }
+      },
+      "model": "qwen2.5:7b",
+      "system_prompt": "When you need to call a function, use this EXACT format:\n<function_call>\n{\"name\": \"OllamaHandler\", \"parameters\": {\"query\": \"query\"}}\n</function_call>"
+    },
+    {
+      "id": "node_twitterV1",
+      "type": "function",
+      "name": "twitter_clone",
+      "description": "You are a twitter search function. When called, perform a twitter search using the provided query. ",
+      "importPath": {
+        "module": "web_operations.twitterv1",
+        "function": "search_tweets_sync",
+        "aliases": "twitter_search"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Search query"
+        }
+      },
+      "model": {},
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"twitter_search\", \"parameters\": {\"query\": search_terms}}\n</function_call>"
+    },
+    {
+      "id": "node_twitter",
+      "type": "function",
+      "name": "twitter_search",
+      "description": "You are a twitter search function. When called, perform a twitter search using the provided query. ",
+      "importPath": {
+        "module": "web_operations.twitter",
+        "function": "search_tweets",
+        "aliases": "twitter_search"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Search query"
+        }
+      },
+      "model": {},
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"twitter_search\", \"parameters\": {\"query\": search_terms}}\n</function_call>"
+    },
+    {
+      "id": "node_2",
+      "type": "handler",
+      "name": "handler",
+      "description": "You are an assistant.You have ability to load file, twitter search, web search and perform mathematical operations.\n\nimportant : prioritise to call functions <function> </function>",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "OllamaHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler"
+        }
+      },
+      "model": "qwen2.5:7b",
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"OllamaHandler\", \"parameters\": {\"query\": query}}\n</function_call>"
+    },
+    {
+      "id": "node_1750498328123",
+      "type": "handler",
+      "name": "Vision",
+      "categoryId": "handler",
+      "description": "you are a model that handle image processing. Process image as user questions or if no question is provided, explain the image.",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "llm_image"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler B"
+        },
+        "data_type": {
+          "type": "str",
+          "description": "file type , options : image, pdf, text"
+        },
+        "file_content": {
+          "type": "str",
+          "description": "leave it blank will be replaced manually latter."
+        }
+      },
+      "model": "llama3.2-vision:latest",
+      "system_prompt": "<function_call>{\"name\": \"llm_image\", \"parameters\": {\"query\": \"image content\"}}</function_call>"
+    },
+    {
+      "id": "node_1",
+      "type": "function",
+      "name": "web_search",
+      "description": "You are a web search function. When called, perform a web search using the provided query. Use this for: - Information lookup and research - Current events and news - Facts, definitions, explanations - Real-time data requests. dont use this for twitter search.",
+      "importPath": {
+        "module": "web_operations.search_ops",
+        "function": "web_search",
+        "aliases": "web_search"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Search query"
+        }
+      },
+      "model": {},
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"web_search\", \"parameters\": {\"query\": search_terms}}\n</function_call>"
+    },
+    {
+      "id": "node_4",
+      "type": "handler",
+      "name": "handler",
+      "description": "You are a mathematical assistant handler. You can multiply , devide, add, and substract by calling functions.\n\n\nimportant : prioritise to call functions <function> </function>",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "OllamaHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler"
+        }
+      },
+      "model": "qwen2.5:7b",
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"OllamaHandler\", \"parameters\": {\"query\": query}}\n</function_call>"
+    },
+    {
+      "id": "node_1750633787635",
+      "type": "data_calls",
+      "name": "load_file",
+      "categoryId": "load_file",
+      "description": "you are a function to load file , return string or csv. connected to files.",
+      "importPath": {
+        "module": "data_calls.data_loader",
+        "function": "DataLoader",
+        "aliases": "load_and_process_data"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "data name "
+        }
+      },
+      "model": {},
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"load_data\", \"parameters\": {\"query\": \"data name\"}}\n</function_call>"
+    },
+    {
+      "id": "node_5",
+      "type": "function",
+      "name": "add",
+      "description": "You are an addition function. Add all numbers in the provided array. Example: add_numbers([1, 2, 3]) returns 6 Use for simple addition operations.",
+      "importPath": {
+        "module": "math_operations.add_ops",
+        "function": "add_numbers",
+        "aliases": "add_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to add"
+        }
+      },
+      "model": {},
+      "system_prompt": "<function_call>{\"name\": \"add_numbers\", \"parameters\": {\"numbers\": \"list of number\"}}</function_call>"
+    },
+    {
+      "id": "node_1750371977961",
+      "type": "function",
+      "name": "subtract",
+      "categoryId": "math",
+      "description": "Reduce a list of numbers using subtraction",
+      "importPath": {
+        "module": "math_operations.reduction_ops",
+        "function": "reduce_numbers",
+        "aliases": "reduce_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to reduce"
+        },
+        "operation": {
+          "type": "string",
+          "description": "Operation to use for reduction"
+        }
+      },
+      "model": {},
+      "system_prompt": "<function_call>{\"name\": \"reduce_numbers\", \"parameters\": {\"numbers\": \"list of number\"}}</function_call>"
+    },
+    {
+      "id": "node_1750372747177",
+      "type": "function",
+      "name": "multiply",
+      "categoryId": "math",
+      "description": "Multiply a list of numbers together",
+      "importPath": {
+        "module": "math_operations.multiply_ops",
+        "function": "multiply_numbers",
+        "aliases": "multiply_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to multiply"
+        }
+      },
+      "model": {},
+      "system_prompt": "<function_call>{\"name\": \"multiply_numbers\", \"parameters\": {\"numbers\": \"list of number\"}}</function_call>"
+    },
+    {
+      "id": "node_1750657398080",
+      "type": "function",
+      "name": "devide",
+      "categoryId": "function",
+      "description": "Devide a list of numbers together",
+      "importPath": {
+        "module": "math_operations.devide_ops",
+        "function": "divide_numbers",
+        "aliases": "devide_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to multiply"
+        }
+      },
+      "model": "",
+      "system_prompt": "<function_call>{\"name\": \"devide_numbers\", \"parameters\": {\"numbers\": \"list of number\"}}</function_call>"
+    },
+    {
+      "id": "node_1750634009370",
+      "type": "file",
+      "name": "sample_data",
+      "categoryId": "file",
+      "description": "file to load name sample_data",
+      "importPath": {
+        "module": "data/csv/sample_data.csv",
+        "function": "read_config",
+        "aliases": "read_config"
+      },
+      "parameters": {
+        "path": {
+          "type": "string",
+          "description": "Path to the configuration file"
+        }
+      },
+      "model": {},
+      "system_prompt": "<function_call>{\"name\": \"read_config\", \"parameters\": {\"path\": \"path file\"}}</function_call>"
+    }
+  ],
+  "edges": [
+    {
+      "source": "node_0",
+      "target": "node_2"
+    },
+    {
+      "source": "node_2",
+      "target": "node_4"
+    },
+    {
+      "source": "node_4",
+      "target": "node_5"
+    },
+    {
+      "source": "node_4",
+      "target": "node_1750371977961"
+    },
+    {
+      "source": "node_0",
+      "target": "node_1750498328123"
+    },
+    {
+      "source": "node_2",
+      "target": "node_1750633787635"
+    },
+    {
+      "source": "node_1750633787635",
+      "target": "node_1750634009370"
+    },
+    {
+      "source": "node_4",
+      "target": "node_1750372747177"
+    },
+    {
+      "source": "node_4",
+      "target": "node_1750657398080"
+    }
+  ],
+  "version": "1.0",
+  "lastModified": "2025-07-13T11:37:16.945Z"
+}

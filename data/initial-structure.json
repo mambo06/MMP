@@ -1,0 +1,26 @@
+{
+  "name": "main",
+  "type": "handler",
+  "system_prompt": "You are an intelligent assistant...",
+  "child": [
+    {
+      "name": "web_search",
+      "type": "function",
+      "description": "Perform a web search",
+      "child": []
+    },
+    {
+      "name": "handler_b",
+      "type": "handler",
+      "description": "Mathematical operations handler",
+      "child": [
+        {
+          "name": "multiply",
+          "type": "function",
+          "description": "Multiply numbers",
+          "child": []
+        }
+      ]
+    }
+  ]
+}

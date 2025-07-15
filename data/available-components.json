@@ -1,0 +1,89 @@
+[
+  {
+    "type": "handler",
+    "items": [
+      {
+        "name": "data_handler",
+        "description": "Handles data processing operations",
+        "system_prompt": "Process data according to user requirements",
+        "child": []
+      },
+      {
+        "name": "image_handler",
+        "description": "Processes image-related operations",
+        "system_prompt": "Handle image processing tasks",
+        "child": []
+      },
+      {
+        "name": "text_handler",
+        "description": "Processes text-related operations",
+        "system_prompt": "Process text according to requirements",
+        "child": []
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "items": [
+      {
+        "name": "fetch_data",
+        "description": "Fetches data from an external source",
+        "parameters": {
+          "url": "string",
+          "method": "string"
+        },
+        "child": []
+      },
+      {
+        "name": "process_image",
+        "description": "Processes an image with various filters",
+        "parameters": {
+          "image_path": "string",
+          "filter_type": "string"
+        },
+        "child": []
+      },
+      {
+        "name": "analyze_text",
+        "description": "Analyzes text for sentiment and key phrases",
+        "parameters": {
+          "text": "string",
+          "language": "string"
+        },
+        "child": []
+      },
+      {
+        "name": "calculate",
+        "description": "Performs mathematical calculations",
+        "parameters": {
+          "operation": "string",
+          "values": "array"
+        },
+        "child": []
+      }
+    ]
+  },
+  {
+    "type": "utility",
+    "items": [
+      {
+        "name": "logger",
+        "description": "Logs information for debugging",
+        "parameters": {
+          "level": "string",
+          "message": "string"
+        },
+        "child": []
+      },
+      {
+        "name": "formatter",
+        "description": "Formats data into different structures",
+        "parameters": {
+          "data": "any",
+          "format": "string"
+        },
+        "child": []
+      }
+    ]
+  }
+]

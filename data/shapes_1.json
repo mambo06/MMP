@@ -1,0 +1,142 @@
+{
+  "categories": [
+    {
+      "id": "handler",
+      "name": "Handlers",
+      "description": "Components that route and delegate operations to other components"
+    },
+    {
+      "id": "function",
+      "name": "Functions",
+      "description": "Executable components that perform specific operations"
+    },
+    {
+      "id": "authority",
+      "name": "Authority",
+      "description": "Executable components that perform specific operations"
+    }
+  ],
+  "shapes": [
+    {
+      "id": "node_0",
+      "type": "handler",
+      "name": "data_authority",
+      "categoryId": "handler",
+      "description": "Main data center handler that manages all controllers",
+      "importPath": {
+        "module": "handlerApp.core.data_center",
+        "function": "DataCenterHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Data Center"
+        }
+      }
+    },
+    {
+      "id": "node_1",
+      "type": "handler",
+      "name": "controller",
+      "categoryId": "handler",
+      "description": "Controller handler for managing sub-components",
+      "importPath": {
+        "module": "handlerApp.core.controller",
+        "function": "ControllerHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Controller"
+        }
+      }
+    },
+    {
+      "id": "node_2",
+      "type": "handler",
+      "name": "head_office",
+      "categoryId": "handler",
+      "description": "Head Office handler for office operations",
+      "importPath": {
+        "module": "handlerApp.office.head_office",
+        "function": "HeadOfficeHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Head Office"
+        }
+      }
+    },
+    {
+      "id": "node_3",
+      "type": "handler",
+      "name": "directorate",
+      "categoryId": "handler",
+      "description": "Directorate handler for directorate operations",
+      "importPath": {
+        "module": "handlerApp.directorate.directorate",
+        "function": "DirectorateHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Directorate"
+        }
+      }
+    },
+    {
+      "id": "node_4",
+      "type": "function",
+      "name": "filetext",
+      "categoryId": "function",
+      "description": "Function to handle text file operations",
+      "importPath": {
+        "module": "handlerApp.file_operations.text_ops",
+        "function": "process_text_file"
+      },
+      "parameters": {
+        "filepath": {
+          "type": "string",
+          "description": "Path to the text file"
+        }
+      }
+    },
+    {
+      "id": "node_5",
+      "type": "function",
+      "name": "database",
+      "categoryId": "function",
+      "description": "Database operations handler",
+      "importPath": {
+        "module": "handlerApp.database_operations.db_ops",
+        "function": "process_database"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Database query to execute"
+        }
+      }
+    },
+    {
+      "id": "node_6",
+      "type": "function",
+      "name": "document",
+      "categoryId": "function",
+      "description": "Document processing operations",
+      "importPath": {
+        "module": "handlerApp.document_operations.doc_ops",
+        "function": "process_document"
+      },
+      "parameters": {
+        "doc_id": {
+          "type": "string",
+          "description": "Document identifier"
+        }
+      }
+    }
+  ],
+  "version": "1.0",
+  "lastModified": "2025-06-20T01:23:45.954Z"
+}

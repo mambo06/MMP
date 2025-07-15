@@ -1,0 +1,246 @@
+{
+  "shapes": [
+    {
+      "id": "node_0",
+      "type": "main",
+      "name": "Main",
+      "model": "qwen2.5:7b",
+      "categoryId": "handler",
+      "description": "You are an intelligent assistant with access to processing image, load data, web search and mathematical capabilities. However, anything else, answer it yourself. None",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "OllamaHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler"
+        }
+      },
+      "system_prompt": "When you need to call a function, use this EXACT format:\n<function_call>\n{\"name\": \"function_name\", \"parameters\": {\"query\": \"value\"}}\n</function_call>"
+    },
+    {
+      "id": "node_1",
+      "name": "web_search",
+      "description": "You are a web search function. When called, perform a web search using the provided query. Use this for: - Information lookup and research - Current events and news - Facts, definitions, explanations - Real-time data requests",
+      "type": "function",
+      "categoryId": "function",
+      "importPath": {
+        "module": "handlerApp.web_operations.search_ops",
+        "function": "web_search",
+        "aliases": "web_search"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Search query"
+        }
+      },
+      "system_prompt": "Function: web_search\nParameters: {\"query\": \"search_terms\"}"
+    },
+    {
+      "id": "node_2",
+      "type": "handler",
+      "name": "handler",
+      "model": "qwen2.5:7b",
+      "categoryId": "handler",
+      "description": "You are an assistant. able to deletage task or perform self answer.",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "OllamaHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler"
+        }
+      },
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"OllamaHandler\", \"parameters\": {\"query\": value}}\n</function_call>"
+    },
+    {
+      "id": "node_1750498328123",
+      "type": "handler",
+      "name": "vision",
+      "model": "llava:latest",
+      "categoryId": "handler",
+      "description": "you are a model that handle image processing. Process image imeediately without return functions. Process image as user asked or if question is not available explain the image. you have web interface, when asked to generate image, just generate data as requested and by your prediction ability.",
+      "importPath": {
+        "module": "handlerApp.ollama_handlers.handler",
+        "function": "OllamaHandler",
+        "aliases": "llm_image"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Handler B"
+        },
+        "final": {
+          "type": "boolean",
+          "description": "should final analysis done"
+        },
+        "data_type": {
+          "type": "str",
+          "description": "file type , options : image, pdf, text"
+        },
+        "file_content": {
+          "type": "str",
+          "description": "base64 image content, or string text"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"llm_image\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    },
+    {
+      "id": "node_1750372747177",
+      "type": "function",
+      "name": "multiply",
+      "categoryId": "function",
+      "description": "Multiply a list of numbers together",
+      "importPath": {
+        "module": "handlerApp.math_operations.multiply_ops",
+        "function": "multiply_numbers",
+        "aliases": "multiply_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to multiply"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"multiply_numbers\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    },
+    {
+      "id": "node_1750",
+      "type": "function",
+      "name": "devide",
+      "categoryId": "function",
+      "description": "Devide a list of numbers together",
+      "importPath": {
+        "module": "handlerApp.math_operations.devide_ops",
+        "function": "divide_numbers",
+        "aliases": "devide_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to multiply"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"devide_numbers\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    },
+    {
+      "id": "node_1750633787635",
+      "type": "data_calls",
+      "name": "load_file",
+      "categoryId": "data_calls",
+      "description": "you are a function to load file , return string or csv. connected to files.",
+      "importPath": {
+        "module": "handlerApp.data_calls.data_loader",
+        "function": "DataLoader",
+        "aliases": "load_and_process_data"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "data name "
+        }
+      },
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"function_name\", \"parameters\": {\"query\": value}}\n</function_call>"
+    },
+    {
+      "id": "node_5",
+      "type": "function",
+      "name": "add",
+      "categoryId": "function",
+      "description": "You are an addition function. Add all numbers in the provided array. Example: add_numbers([1, 2, 3]) returns 6 Use for simple addition operations.",
+      "importPath": {
+        "module": "handlerApp.math_operations.add_ops",
+        "function": "add_numbers",
+        "aliases": "add_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to add"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"add_numbers\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    },
+    {
+      "id": "node_1750371977961",
+      "type": "function",
+      "name": "subtract",
+      "categoryId": "function",
+      "description": "Reduce a list of numbers using subtraction",
+      "importPath": {
+        "module": "handlerApp.math_operations.reduction_ops",
+        "function": "reduce_numbers",
+        "aliases": "reduce_numbers"
+      },
+      "parameters": {
+        "numbers": {
+          "type": "array",
+          "description": "List of numbers to reduce"
+        },
+        "operation": {
+          "type": "string",
+          "description": "Operation to use for reduction"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"reduce_numbers\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    },
+    {
+      "id": "node_1750634009370",
+      "type": "file",
+      "name": "sample_data",
+      "categoryId": "file",
+      "description": "file to load name sample_data",
+      "importPath": {
+        "module": "data/csv/sample_data.csv",
+        "function": "read_config",
+        "aliases": "read_config"
+      },
+      "parameters": {
+        "path": {
+          "type": "string",
+          "description": "Path to the configuration file"
+        }
+      },
+      "system_prompt": "<function_call>{\"name\": \"read_config\", \"parameters\": {\"query\": \"value\"}}</function_call>"
+    }
+  ],
+  "categories": [
+    {
+      "id": "handler",
+      "name": "Handlers",
+      "description": "Components that route and delegate operations to other components"
+    },
+    {
+      "id": "main",
+      "name": "Main",
+      "description": "Special type of handler class that populate data"
+    },
+    {
+      "id": "function",
+      "name": "Function",
+      "description": "Executable components that perform specific operations"
+    },
+    {
+      "id": "file",
+      "name": "File",
+      "description": "file contain data"
+    },
+    {
+      "id": "data_calls",
+      "name": "data_calls",
+      "description": "Calls to api operations"
+    }
+  ],
+  "metadata": {
+    "created": "2025-07-13T21:15:39.052746",
+    "version": "1.0",
+    "has_file": false,
+    "file_info": null
+  }
+}

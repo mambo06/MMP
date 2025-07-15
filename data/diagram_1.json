@@ -1,0 +1,396 @@
+{
+  "nodes": [
+    {
+      "id": "data_authority",
+      "type": "authority",
+      "name": "data_authority",
+      "description": "Main data center handler that manages all controllers",
+      "importPath": {
+        "module": "handlerApp.core.data_center",
+        "function": "DataCenterHandler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Data Center"
+        }
+      }
+    },
+    {
+      "id": "controller_1",
+      "type": "handler",
+      "name": "controller_1",
+      "description": "First controller handler",
+      "importPath": {
+        "module": "handlerApp.core.controller1",
+        "function": "Controller1Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Controller 1"
+        }
+      }
+    },
+    {
+      "id": "controller_2",
+      "type": "handler",
+      "name": "controller_2",
+      "description": "Second controller handler",
+      "importPath": {
+        "module": "handlerApp.core.controller2",
+        "function": "Controller2Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Controller 2"
+        }
+      }
+    },
+    {
+      "id": "controller_3",
+      "type": "handler",
+      "name": "controller_3",
+      "description": "Third controller handler",
+      "importPath": {
+        "module": "handlerApp.core.controller3",
+        "function": "Controller3Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query to send to Controller 3"
+        }
+      }
+    },
+    {
+      "id": "c1_head_office",
+      "type": "handler",
+      "name": "head_office_1",
+      "description": "Head Office under Controller 1",
+      "importPath": {
+        "module": "handlerApp.office.head_office1",
+        "function": "HeadOffice1Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Head Office 1"
+        }
+      }
+    },
+    {
+      "id": "c1_directorate_1",
+      "type": "handler",
+      "name": "directorate_1_1",
+      "description": "Directorate 1 under Controller 1",
+      "importPath": {
+        "module": "handlerApp.directorate.directorate1_1",
+        "function": "Directorate1_1Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Directorate 1_1"
+        }
+      }
+    },
+    {
+      "id": "c2_head_office",
+      "type": "handler",
+      "name": "head_office_2",
+      "description": "Head Office under Controller 2",
+      "importPath": {
+        "module": "handlerApp.office.head_office2",
+        "function": "HeadOffice2Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Head Office 2"
+        }
+      }
+    },
+    {
+      "id": "c2_directorate_1",
+      "type": "handler",
+      "name": "directorate_1_2",
+      "description": "Directorate 1 under Controller 2",
+      "importPath": {
+        "module": "handlerApp.directorate.directorate1_2",
+        "function": "Directorate1_2Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Directorate 1_2"
+        }
+      }
+    },
+    {
+      "id": "c3_head_office",
+      "type": "handler",
+      "name": "head_office_3",
+      "description": "Head Office under Controller 3",
+      "importPath": {
+        "module": "handlerApp.office.head_office3",
+        "function": "HeadOffice3Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Head Office 3"
+        }
+      }
+    },
+    {
+      "id": "c3_directorate_1",
+      "type": "handler",
+      "name": "directorate_1_3",
+      "description": "Directorate 1 under Controller 3",
+      "importPath": {
+        "module": "handlerApp.directorate.directorate1_3",
+        "function": "Directorate1_3Handler"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Query for Directorate 1_3"
+        }
+      }
+    },
+    {
+      "id": "function_filetext_1",
+      "type": "function",
+      "name": "filetext_1",
+      "description": "Function to handle text file operations for Controller 1",
+      "importPath": {
+        "module": "handlerApp.file_operations.text_ops1",
+        "function": "process_text_file1"
+      },
+      "parameters": {
+        "filepath": {
+          "type": "string",
+          "description": "Path to the text file"
+        }
+      }
+    },
+    {
+      "id": "function_database_1",
+      "type": "function",
+      "name": "database_1",
+      "description": "Database operations for Controller 1",
+      "importPath": {
+        "module": "handlerApp.database_operations.db_ops1",
+        "function": "process_database1"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Database query to execute"
+        }
+      }
+    },
+    {
+      "id": "function_document_1",
+      "type": "function",
+      "name": "document_1",
+      "description": "Document processing for Controller 1",
+      "importPath": {
+        "module": "handlerApp.document_operations.doc_ops1",
+        "function": "process_document1"
+      },
+      "parameters": {
+        "doc_id": {
+          "type": "string",
+          "description": "Document identifier"
+        }
+      }
+    },
+    {
+      "id": "function_filetext_2",
+      "type": "function",
+      "name": "filetext_2",
+      "description": "Function to handle text file operations for Controller 2",
+      "importPath": {
+        "module": "handlerApp.file_operations.text_ops2",
+        "function": "process_text_file2"
+      },
+      "parameters": {
+        "filepath": {
+          "type": "string",
+          "description": "Path to the text file"
+        }
+      }
+    },
+    {
+      "id": "function_database_2",
+      "type": "function",
+      "name": "database_2",
+      "description": "Database operations for Controller 2",
+      "importPath": {
+        "module": "handlerApp.database_operations.db_ops2",
+        "function": "process_database2"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Database query to execute"
+        }
+      }
+    },
+    {
+      "id": "function_document_2",
+      "type": "function",
+      "name": "document_2",
+      "description": "Document processing for Controller 2",
+      "importPath": {
+        "module": "handlerApp.document_operations.doc_ops2",
+        "function": "process_document2"
+      },
+      "parameters": {
+        "doc_id": {
+          "type": "string",
+          "description": "Document identifier"
+        }
+      }
+    },
+    {
+      "id": "function_filetext_3",
+      "type": "function",
+      "name": "filetext_3",
+      "description": "Function to handle text file operations for Controller 3",
+      "importPath": {
+        "module": "handlerApp.file_operations.text_ops3",
+        "function": "process_text_file3"
+      },
+      "parameters": {
+        "filepath": {
+          "type": "string",
+          "description": "Path to the text file"
+        }
+      }
+    },
+    {
+      "id": "function_database_3",
+      "type": "function",
+      "name": "database_3",
+      "description": "Database operations for Controller 3",
+      "importPath": {
+        "module": "handlerApp.database_operations.db_ops3",
+        "function": "process_database3"
+      },
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "Database query to execute"
+        }
+      }
+    },
+    {
+      "id": "function_document_3",
+      "type": "function",
+      "name": "document_3",
+      "description": "Document processing for Controller 3",
+      "importPath": {
+        "module": "handlerApp.document_operations.doc_ops3",
+        "function": "process_document3"
+      },
+      "parameters": {
+        "doc_id": {
+          "type": "string",
+          "description": "Document identifier"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "data_authority",
+      "target": "controller_1"
+    },
+    {
+      "source": "data_authority",
+      "target": "controller_2"
+    },
+    {
+      "source": "data_authority",
+      "target": "controller_3"
+    },
+    {
+      "source": "controller_1",
+      "target": "c1_head_office"
+    },
+    {
+      "source": "controller_1",
+      "target": "c1_directorate_1"
+    },
+    {
+      "source": "c1_head_office",
+      "target": "function_database_1"
+    },
+    {
+      "source": "c1_head_office",
+      "target": "function_document_1"
+    },
+    {
+      "source": "c1_directorate_1",
+      "target": "function_document_1"
+    },
+    {
+      "source": "c1_directorate_1",
+      "target": "function_filetext_1"
+    },
+    {
+      "source": "controller_2",
+      "target": "c2_head_office"
+    },
+    {
+      "source": "controller_2",
+      "target": "c2_directorate_1"
+    },
+    {
+      "source": "c2_head_office",
+      "target": "function_database_2"
+    },
+    {
+      "source": "c2_head_office",
+      "target": "function_document_2"
+    },
+    {
+      "source": "c2_directorate_1",
+      "target": "function_document_2"
+    },
+    {
+      "source": "c2_directorate_1",
+      "target": "function_filetext_2"
+    },
+    {
+      "source": "controller_3",
+      "target": "c3_head_office"
+    },
+    {
+      "source": "controller_3",
+      "target": "c3_directorate_1"
+    },
+    {
+      "source": "c3_head_office",
+      "target": "function_database_3"
+    },
+    {
+      "source": "c3_head_office",
+      "target": "function_document_3"
+    },
+    {
+      "source": "c3_directorate_1",
+      "target": "function_document_3"
+    },
+    {
+      "source": "c3_directorate_1",
+      "target": "function_filetext_3"
+    }
+  ],
+  "version": "1.0",
+  "lastModified": "2025-06-20T00:45:05.954Z"
+}
