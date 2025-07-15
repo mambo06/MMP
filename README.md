@@ -86,6 +86,8 @@ Configuration file where all setup is defined, including:
 
 ## Installation Guide
 
+> **Development Note**: Due to development limitations, this project was built exclusively on **Mac Silicon (ARM)**.
+
 ### Prerequisites (Technical Knowledge Required)
 
 1. **Ollama Setup**: Ollama must be running on the installed port with the following models:
@@ -101,7 +103,7 @@ Configuration file where all setup is defined, including:
 4. Run `run-nextapp.sh`
 5. Installation complete!
 
-> **Development Note**: Due to development limitations, this project was built exclusively on **Mac Silicon (ARM)**. 
+
 
 ### Desktop Client Support
 - **macOS Silicon**: Full backend support provided
