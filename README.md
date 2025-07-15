@@ -22,6 +22,24 @@ This application implements a mesh data center with LLM functional call capabili
 4. **Offline LLM Access** - Does not require internet access to use LLM capabilities
 5. **Lightweight Implementation** - Can be implemented with small LLM models like QWEN2.5B
 
+## Platform Compatibility
+
+> **Development Note**: Due to development limitations, this project was built exclusively on **Mac Silicon (ARM)**. 
+
+### Desktop Client Support
+- **macOS Silicon**: Full backend support provided
+- **iOS**: Backend support available (unsigned application)
+- **Other Platforms**: Use web interface (see Web Interface Setup below)
+
+### Web Interface Setup
+For platforms other than macOS Silicon and iOS, you can use the web interface by starting a simple HTTP server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Run this command within the `web` folder to serve the web interface locally.
+
 ## Use Cases
 
 This MMP is particularly valuable for organizations with limited ability to share data both internally and externally:
@@ -113,13 +131,39 @@ The server opens three ports:
 - Users can access port 3002 but cannot view or edit configuration
 - Clients connect by adjusting IP in the provided UI (port locked to 3002)
 
+## Additional Features
+
+### Twitter Integration
+The project includes Twitter implementation functionality with two files provided. To use Twitter features:
+
+```bash
+python twitterV1.py
+```
+
+> **Note:** You need to login to use Twitter functionality.
+
 ## Getting Started
 
+### For macOS Silicon/iOS Users:
 1. Follow the installation steps above
-2. Access the interface via `http://[server-ip]:3002`
-3. Configure your mesh network through the web interface
-4. Add your custom functions and define them in diagram.json
-5. Start building your decentralized AI ecosystem!
+2. Use the provided desktop client
+3. Configure your mesh network through the interface
+
+### For Other Platforms:
+1. Follow the installation steps above
+2. Navigate to the `web` folder
+3. Start the HTTP server: `python3 -m http.server 8080`
+4. Access the interface via `http://localhost:8080`
+5. Configure your mesh network through the web interface
+
+### General Setup:
+1. Add your custom functions and define them in diagram.json
+2. Start building your decentralized AI ecosystem!
+
+## Contact
+
+For questions, support, or collaboration inquiries, please contact:
+**Email**: [mambo06@gmail.com](mailto:mambo06@gmail.com)
 
 ## License
 
@@ -133,5 +177,3 @@ For detailed theoretical background, please refer to the original research paper
 ---
 
 **Enjoy building your mesh multicontext protocol network!** 🚀
-
-This work is compiled under Apple Silicon. Other OS might find difficulties.
