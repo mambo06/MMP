@@ -157,6 +157,11 @@ python twitterV1.py
 4. Access the interface via `http://localhost:8080`
 5. Configure your mesh network through the web interface
 
+### Embedded Chat
+Chat client can also be accessed from `http://server:3002/chat`
+
+> **Note:** The client app has the advantage of clipboard monitoring. Makes it easy to integrate with your work. This feature is not available in embedded chat.
+
 ### General Setup:
 1. Add your custom functions and define them in diagram.json
 2. Start building your decentralized AI ecosystem!
