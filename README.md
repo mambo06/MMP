@@ -133,3 +133,5 @@ For detailed theoretical background, please refer to the original research paper
 ---
 
 **Enjoy building your mesh multicontext protocol network!** 🚀
+
+This work is compiled under Apple Silicon. Other OS might find difficulties.
