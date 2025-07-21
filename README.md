@@ -15,6 +15,19 @@ The MMP server provides a comprehensive web-based interface for managing your me
 ![MMP Editor Interface](preview/MMP-editor.png)
 *Configuration editor for managing nodes, functions, and network settings*
 
+#### Server Embedded Capabilities
+The MMP supports embedded AI functionality across different contexts:
+
+![MMP Embed Open](preview/MMP-embed-open.png)
+*Embedded interface integration in external applications*
+
+![MMP Embed Image](preview/MMP-embed-image.png)
+*Image processing capabilities within embedded contexts*
+
+![MMP Embed Answer](preview/MMP-embed-answer.png)
+*AI responses delivered through embedded interface*
+
+
 ### Client Applications
 The MMP ecosystem includes both desktop and web clients for seamless interaction:
 
@@ -34,17 +47,6 @@ The MMP ecosystem includes both desktop and web clients for seamless interaction
 ![MMP Client Clipboard](preview/MMP-client-clipboard.png)
 *Clipboard integration for easy data transfer and management*
 
-#### Embedded Capabilities
-The MMP supports embedded AI functionality across different contexts:
-
-![MMP Embed Open](preview/MMP-embed-open.png)
-*Embedded interface integration in external applications*
-
-![MMP Embed Image](preview/MMP-embed-image.png)
-*Image processing capabilities within embedded contexts*
-
-![MMP Embed Answer](preview/MMP-embed-answer.png)
-*AI responses delivered through embedded interface*
 
 ## Abstract
 
