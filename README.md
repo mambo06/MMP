@@ -4,6 +4,48 @@
 
 This repository contains the implementation of the **Mesh Multicontext Protocol**, based on the research paper ["Centralisation and Decentralisation Strategy of Data Centre for Government in Response to Machine Learning Technology"](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5321083).
 
+## Preview
+
+### Server Interface
+The MMP server provides a comprehensive web-based interface for managing your mesh network:
+
+![MMP Home Interface](preview/MMP-home.png)
+*Main dashboard showing the MMP network overview and status*
+
+![MMP Editor Interface](preview/MMP-editor.png)
+*Configuration editor for managing nodes, functions, and network settings*
+
+### Client Applications
+The MMP ecosystem includes both desktop and web clients for seamless interaction:
+
+#### Desktop Client Features
+![MMP Client Preview](preview/MMP-client-preview.png)
+*Main client interface showing conversation and function call capabilities*
+
+![MMP Client Answer](preview/MMP-client-answer.png)
+*Client displaying AI responses with integrated function calls*
+
+![MMP Client Compare](preview/MMP-client-compare.png)
+*Side-by-side comparison feature for analyzing different responses*
+
+![MMP Client Files](preview/MMP-client-files.png)
+*File management interface for handling documents and data*
+
+![MMP Client Clipboard](preview/MMP-client-clipboard.png)
+*Clipboard integration for easy data transfer and management*
+
+#### Embedded Capabilities
+The MMP supports embedded AI functionality across different contexts:
+
+![MMP Embed Open](preview/MMP-embed-open.png)
+*Embedded interface integration in external applications*
+
+![MMP Embed Image](preview/MMP-embed-image.png)
+*Image processing capabilities within embedded contexts*
+
+![MMP Embed Answer](preview/MMP-embed-answer.png)
+*AI responses delivered through embedded interface*
+
 ## Abstract
 
 The Mesh Multicontext Protocol addresses key challenges in modern data management:
