@@ -32,17 +32,18 @@ The MMP supports embedded AI functionality across different contexts:
 The MMP ecosystem includes both desktop and web clients for seamless interaction:
 
 #### Desktop Client Features
-![MMP Client Preview](preview/MMP-client-preview.png)
-*Main client interface showing conversation and function call capabilities*
 
 ![MMP Client Answer](preview/MMP-client-answer.png)
 *Client displaying AI responses with integrated function calls*
 
-![MMP Client Compare](preview/MMP-client-compare.png)
-*Side-by-side comparison feature for analyzing different responses*
-
 ![MMP Client Files](preview/MMP-client-files.png)
 *File management interface for handling documents and data*
+
+![MMP Client Preview](preview/MMP-client-preview.png)
+*Client interface showing file preview capabilities*
+
+![MMP Client Compare](preview/MMP-client-compare.png)
+*Side-by-side comparison feature for analyzing different responses*
 
 ![MMP Client Clipboard](preview/MMP-client-clipboard.png)
 *Clipboard integration for easy data transfer and management*
