@@ -64,23 +64,6 @@ This application implements a mesh data center with LLM functional call capabili
 4. **Offline LLM Access** - Does not require internet access to use LLM capabilities
 5. **Lightweight Implementation** - Can be implemented with small LLM models like QWEN2.5B
 
-## Platform Compatibility
-
-> **Development Note**: Due to development limitations, this project was built exclusively on **Mac Silicon (ARM)**. 
-
-### Desktop Client Support
-- **macOS Silicon**: Full backend support provided
-- **iOS**: Backend support available (unsigned application)
-- **Other Platforms**: Use web interface (see Web Interface Setup below)
-
-### Web Interface Setup
-For platforms other than macOS Silicon and iOS, you can use the web interface by starting a simple HTTP server:
-
-```bash
-python3 -m http.server 8080
-```
-
-Run this command within the `web` folder to serve the web interface locally.
 
 ## Use Cases
 
@@ -145,6 +128,8 @@ Configuration file where all setup is defined, including:
 
 ## Installation Guide
 
+> **Development Note**: Due to development limitations, this project was built exclusively on **Mac Silicon (ARM)**.
+
 ### Prerequisites (Technical Knowledge Required)
 
 1. **Ollama Setup**: Ollama must be running on the installed port with the following models:
@@ -159,6 +144,22 @@ Configuration file where all setup is defined, including:
 3. Copy `data` folder and `python` folder at the same level as the server app
 4. Run `run-nextapp.sh`
 5. Installation complete!
+
+
+
+### Desktop Client Support
+- **macOS Silicon**: Full backend support provided
+- **iOS**: Backend support available (unsigned application)
+- **Other Platforms**: Use web interface (see Web Interface Setup below)
+
+### Web Interface Setup
+For platforms other than macOS Silicon and iOS, you can use the web interface by starting a simple HTTP server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Run this command within the `web` folder to serve the web interface locally.
 
 ## Network Architecture
 
@@ -197,6 +198,11 @@ python twitterV1.py
 3. Start the HTTP server: `python3 -m http.server 8080`
 4. Access the interface via `http://localhost:8080`
 5. Configure your mesh network through the web interface
+
+### Embedded Chat
+Chat client can also be accessed from `http://server:3002/chat`
+
+> **Note:** The client app has the advantage of clipboard monitoring. Makes it easy to integrate with your work. This feature is not available in embedded chat.
 
 ### General Setup:
 1. Add your custom functions and define them in diagram.json
