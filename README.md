@@ -152,6 +152,7 @@ Configuration file where all setup is defined, including:
 
 ### Desktop Client Support
 - **macOS Silicon**: Full backend support provided
+- **Linux Debian**: Full backend support provided
 - **iOS**: Backend support available (unsigned application)
 - **Other Platforms**: Use web interface (see Web Interface Setup below)
 
