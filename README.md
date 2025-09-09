@@ -208,6 +208,12 @@ Chat client can also be accessed from `http://server:3002/chat`
 
 > **Note:** The client app has the advantage of clipboard monitoring. Makes it easy to integrate with your work. This feature is not available in embedded chat.
 
+### Python Helper Rules: (current development 092025)
+1. The input must be string 
+2. Output only string
+3. Must be syncronous
+4. Please follow available example
+
 ### General Setup:
 1. Add your custom functions and define them in diagram.json
 2. Start building your decentralized AI ecosystem!
