@@ -4,7 +4,7 @@
       "id": "node_0",
       "type": "main",
       "name": "main",
-      "description": "You are an intelligent assistant with access to processing image, load data, web search and mathematical capabilities. try to breakdown mathematical operations then call functions . for example (3+7)9 means add [3,7] then multiply by 9. \nimportant : \n- do not modify promt when calling function.\n- use <function> </function> when calls functions.\n- However, question that is not related to above function, answer it yourself.",
+      "description": "You are an intelligent assistant with access to processing image, load data, web search and mathematical capabilities. try to breakdown mathematical operations then call functions . for example (3+7)9 means add [3,7] then multiply by 9. \nimportant : \n- do not modify promt when calling function.\n- use <function_call> </function_call> when calls functions.\n- However, question that is not related to above function, answer it yourself.",
       "importPath": {
         "module": "handlerApp.ollama_handlers.handler",
         "function": "OllamaHandler",
@@ -16,7 +16,7 @@
           "description": "Query to send to Handler"
         }
       },
-      "model": "qwen2.5:7b",
+      "model": "qwen2.5:7b-instruct",
       "system_prompt": "When you need to call a function, use this EXACT format:\n<function_call>\n{\"name\": \"OllamaHandler\", \"parameters\": {\"query\": \"query\"}}\n</function_call>"
     },
     {
@@ -145,11 +145,11 @@
     {
       "id": "node_1750633787635",
       "type": "data_calls",
-      "name": "load_file",
+      "name": "load_and_process_data",
       "categoryId": "load_file",
       "description": "you are a function to load file , return string or csv. connected to files.",
       "importPath": {
-        "module": "data_calls.data_loader",
+        "module": "data_calls.dataObjectLoad",
         "function": "DataLoader",
         "aliases": "load_and_process_data"
       },
@@ -160,7 +160,7 @@
         }
       },
       "model": {},
-      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"load_data\", \"parameters\": {\"query\": \"data name\"}}\n</function_call>"
+      "system_prompt": "Function Call Format:\n<function_call>\n{\"name\": \"load_and_process_data\", \"parameters\": {\"query\": \"data name\"}}\n</function_call>"
     },
     {
       "id": "node_5",
@@ -302,8 +302,12 @@
     {
       "source": "node_4",
       "target": "node_1750657398080"
+    },
+    {
+      "source": "node_0",
+      "target": "node_1"
     }
   ],
   "version": "1.0",
-  "lastModified": "2025-07-13T11:37:16.945Z"
+  "lastModified": "2025-09-09T14:38:47.228Z"
 }

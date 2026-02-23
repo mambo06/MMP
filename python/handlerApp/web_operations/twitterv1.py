@@ -9,8 +9,6 @@ from pathlib import Path
 # Configuration - Docker-friendly paths
 # BASE_DIR = Path('/app/data')  # Use app data directory instead of home
 # BASE_DIR.mkdir(exist_ok=True, parents=True)  # Create directory if it doesn't exist
-# THIS CODE IS NOT PERMITTED BY TWITTER, USE WITH YOUR OWN RISK.
-
 
 BASE_DIR = Path.cwd()  # Use current working directory
 

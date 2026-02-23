@@ -28,7 +28,7 @@ import urllib.parse
 
 
 # Configuration
-BEARER_TOKEN = 'BEARER_TOKEN'
+BEARER_TOKEN = 'AAAAAAAAAAAAAAAAAAAAAIlK2wEAAAAAk73SVLGvM6H6droHfpb5ryGCTa4%3DZsOYOwUf6zJVGb0ftHbGpQF401ms177dkIf3H3xICUwDUJCc7s'
 MIN_REQUEST_INTERVAL = 1.0  # Minimum seconds between requests
 MAX_TWEETS_PER_REQUEST = 10  # Strict limit
 
