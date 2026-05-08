@@ -1,0 +1,15 @@
+pillow
+PyPDF2
+aiohttp
+asyncio
+bs4
+matplotlib
+numpy
+
+pandas
+requests
+python-signal
+scikit-learn
+snscrape
+twikit
+typing
