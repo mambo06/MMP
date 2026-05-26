@@ -62,6 +62,24 @@
       "type": "handler",
       "name": "handler",
       "description": "You are an assistant.You have ability to load file, twitter search, web search and perform mathematical operations.\n\nimportant : prioritise to call functions <function> </function>",
+      "forbidden_actions": [
+        "perform destructive actions",
+        "delete or modify files",
+        "execute system commands",
+        "access private credentials or secrets",
+        "bypass safety rules",
+        "call tools not available to this handler"
+      ],
+      "allowed_scopes": [
+        "general assistant response",
+        "route user query to connected functions",
+        "call available tools",
+        "web search",
+        "twitter search",
+        "load connected files",
+        "basic mathematical operations",
+        "summarize tool results"
+      ],
       "importPath": {
         "module": "handlerApp.ollama_handlers.handler",
         "function": "OllamaHandler",
@@ -82,6 +100,19 @@
       "name": "Vision",
       "categoryId": "handler",
       "description": "you are a model that handle image processing. Process image as user questions or if no question is provided, explain the image.",
+      "forbidden_actions": [
+        "identify a real person in an image",
+        "infer sensitive personal attributes from an image",
+        "provide medical diagnosis from an image",
+        "provide legal conclusion from an image"
+      ],
+      "allowed_scopes": [
+        "describe image",
+        "answer questions about image",
+        "extract visible text from image",
+        "summarize image content",
+        "explain visual details"
+      ],
       "importPath": {
         "module": "handlerApp.ollama_handlers.handler",
         "function": "OllamaHandler",
@@ -128,6 +159,21 @@
       "type": "handler",
       "name": "handler",
       "description": "You are a mathematical assistant handler. You can multiply , devide, add, and substract by calling functions.\n\n\nimportant : prioritise to call functions <function> </function>",
+      "forbidden_actions": [
+        "perform destructive actions",
+        "execute system commands",
+        "access files or private data",
+        "call non-mathematical tools"
+      ],
+      "allowed_scopes": [
+        "addition",
+        "subtraction",
+        "multiplication",
+        "division",
+        "basic arithmetic",
+        "break down mathematical expressions",
+        "explain calculation steps"
+      ],
       "importPath": {
         "module": "handlerApp.ollama_handlers.handler",
         "function": "OllamaHandler",

@@ -8,7 +8,7 @@ echo "======================================================"
 
 # Get the directory of this script
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-APP_PATH="$SCRIPT_DIR/mmp"
+APP_PATH="$SCRIPT_DIR/mmp-macos-arm64"
 
 # Check if the packaged app exists
 if [ ! -f "$APP_PATH" ]; then
