@@ -35,23 +35,23 @@ desC uses a contextual RAG workflow to provide better answers based on files ins
 
 ### Chat
 
-![Chat screenshot](preview/desC.png)
+![Chat screenshot](preview/desC.jpeg)
 
 ### Chat Server Settings
 
-![Chat server settings](preview/desC-setting.png)
+![Chat server settings](preview/desC-setting.jpeg)
 
 ### Pinned Window
 
-![Pinned window](preview/desC-pinned.png)
+![Pinned window](preview/desC-pinned.jpeg)
 
 ### Code Settings
 
-![Code settings](preview/desC-Code-setting.png)
+![Code settings](preview/desC-Code-setting.jpeg)
 
 ### Project-Aware HTML Generation
 
-![Generating HTML from a project](preview/desC-Code-generating.png)
+![Generating HTML from a project](preview/desC-Code-generating.jpeg)
 
 ---
 
