@@ -23,27 +23,29 @@ It combines a clean LLM chat interface with a project-aware assistant for **code
 
 ---
 
+
 ## Screenshots
 
 ### Chat
 
-![Chat screenshot](images/chat-ss.png)
+![Chat screenshot](preview/desC.jpeg)
 
 ### Chat Server Settings
 
-![Chat server settings](images/chat-server-setting-ss.png)
+![Chat server settings](preview/desC-setting.jpeg)
 
 ### Pinned Window
 
-![Pinned window](images/pinned-windows-ss.png)
+![Pinned window](preview/desC-pinned.jpeg)
 
 ### Code Settings
 
-![Code settings](images/code-setting.png)
+![Code settings](preview/desC-Code-setting.jpeg)
 
 ### Project-Aware HTML Generation
 
-![Generating HTML from a project](images/code-sample-generating-html-from-project.png)
+![Generating HTML from a project](preview/desC-Code-generating.jpeg)
+
 
 ---
 
