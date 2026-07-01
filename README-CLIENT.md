@@ -46,7 +46,6 @@ You can also connect desC to external providers such as **Groq**, **Google Gemin
 ---
 
 ## Screenshots
-## Screenshots
 
 <table>
   <tr>
