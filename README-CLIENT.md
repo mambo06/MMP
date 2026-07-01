@@ -46,26 +46,37 @@ You can also connect desC to external providers such as **Groq**, **Google Gemin
 ---
 
 ## Screenshots
+## Screenshots
 
-### Chat
+<table>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Chat</h3>
+      <img src="preview/desC.jpeg" alt="Chat screenshot" width="100%">
+    </td>
+    <td width="50%">
+      <h3 align="center">Chat Server Settings</h3>
+      <img src="preview/desC-setting.jpeg" alt="Chat server settings screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3 align="center">Pinned Window</h3>
+      <img src="preview/desC-pinned.jpeg" alt="Pinned window screenshot" width="100%">
+    </td>
+    <td width="50%">
+      <h3 align="center">Code Settings</h3>
+      <img src="preview/desC-Code-setting.jpeg" alt="Code settings screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <h3 align="center">Project-Aware HTML Generation</h3>
+      <img src="preview/desC-Code-generating.jpeg" alt="Generating HTML from a project screenshot" width="100%">
+    </td>
+  </tr>
+</table>
 
-![Chat screenshot](preview/desC.jpeg)
-
-### Chat Server Settings
-
-![Chat server settings](preview/desC-setting.jpeg)
-
-### Pinned Window
-
-![Pinned window](preview/desC-pinned.jpeg)
-
-### Code Settings
-
-![Code settings](preview/desC-Code-setting.jpeg)
-
-### Project-Aware HTML Generation
-
-![Generating HTML from a project](preview/desC-Code-generating.jpeg)
 
 ---
 
