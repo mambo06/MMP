@@ -194,7 +194,7 @@ Please make sure you have:
       <img src="preview/grammar-results.png" alt="Grammar results screenshot" width="100%">
     </td>
     <td width="33%">
-      <h3 align="center">Landing Page Example</h3>
+      <h3 align="center">Code on Foreign Language</h3>
       <img src="preview/exp-landing.png" alt="Landing page example screenshot" width="100%">
     </td>
     <td width="33%">
