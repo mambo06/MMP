@@ -1,37 +1,158 @@
 # desC
 
-**desC** is a desktop AI assistant for **macOS**, **Windows**, and **Linux**.
+**desC** is a lightweight desktop AI assistant for **macOS**, **Windows**, and **Linux**.
 
-It combines a clean LLM chat interface with a project-aware assistant for **code**, **documents**, and local workflows using contextual on-device search and RAG-style reasoning.
+It gives you a clean LLM chat interface, a reliable local assistant, and context-aware help for **large codebases**, **large document folders**, and private writing workflows.
 
-desC is designed to be useful even with small local models, while also supporting external LLM providers such as **Groq**, **Google Gemini**, **OpenAI-compatible endpoints**, and local LLM servers.
+desC is built for people who want practical AI assistance without always depending on expensive hosted APIs.
+
+Use it locally, connect it to providers like **Groq**, **Google Gemini**, **OpenAI-compatible endpoints**, or run it with your own local LLM server.
 
 ---
 
-## Highlights
+## Feature Highlights
 
-- Desktop AI assistant for **macOS**, **Windows**, and **Linux**
-- Local on-device chat and project-aware assistance
-- Codebase and document search without remote indexing
-- Improved local codebase reasoning
-- Optional external LLM provider support
-- Local grammar checking
-- Image support for on-device desC workflows, depending on machine capability
-- Standard OS installation process
-- Lightweight default on-device model setup
-- Works with local models or hosted APIs
+### Lightweight context-aware RAG assistant for large projects
+
+desC helps you work with large codebases and document folders using contextual local search and RAG-style reasoning.
+
+Ask questions like:
+
+```text
+Where is authentication configured?
+```
+
+```text
+Which file controls the landing page layout?
+```
+
+```text
+Summarize the documents in this folder.
+```
+
+```text
+Find the setting related to this behavior.
+```
+
+desC is designed to understand project context without forcing you into a heavy setup.
+
+---
+
+### Free local grammar check for large documents
+
+Grammar on your secret document? **desC got you.**
+
+desC includes a local grammar checker under **Clause**, so you can check large documents, private drafts, business clauses, notes, and reports directly on your device.
+
+No online grammar checker required.
+
+No external API required.
+
+Your sensitive text stays local.
+
+---
+
+### Reliable local assistant
+
+desC is designed to make small on-device models genuinely useful.
+
+With a lightweight local model setup, desC can assist with:
+
+- Local chat
+- Codebase questions
+- Document questions
+- Grammar checking
+- Project-aware search
+- Private offline workflows
+
+You can also connect to hosted providers when you need extra speed or stronger reasoning.
+
+---
+
+## Why desC?
+
+- **Lightweight desktop AI assistant** for macOS, Windows, and Linux
+- **Context-aware RAG assistant** for codebases and document folders
+- **Works on large projects** without a complicated setup
+- **Free local grammar checking** for large and private documents
+- **Reliable local assistant** using lightweight on-device models
+- **Codebase and document search without remote indexing**
+- **Improved local codebase reasoning**
+- **Optional external LLM provider support**
+- **Image support** for on-device workflows, depending on machine capability
+- **Standard OS installation process**
+- **Works with local models or hosted APIs**
+
+---
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="33%">
+      <h3 align="center">Clause Grammar Settings</h3>
+      <img src="preview/grammar-settings.png" alt="Clause grammar settings screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Grammar Results</h3>
+      <img src="preview/grammar-results.png" alt="Grammar results screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Code Assistant</h3>
+      <img src="preview/code-results.png" alt="Code assistant screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <h3 align="center">Code Settings</h3>
+      <img src="preview/desC-Code-setting.jpeg" alt="Code settings screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Code on Foreign Language</h3>
+      <img src="preview/exp-landing.png" alt="Code on foreign language screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Chat</h3>
+      <img src="preview/desC.jpeg" alt="Chat screenshot" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <h3 align="center">Chat Server Settings</h3>
+      <img src="preview/desC-setting.jpeg" alt="Chat server settings screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Pinned Window</h3>
+      <img src="preview/desC-pinned.jpeg" alt="Pinned window screenshot" width="100%">
+    </td>
+    <td width="33%">
+      <h3 align="center">Project-Aware HTML Generation</h3>
+      <img src="preview/desC-Code-generating.jpeg" alt="Generating HTML from a project screenshot" width="100%">
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## Local On-Device Features
 
-desC includes local on-device features for private and lightweight workflows.
+desC includes local on-device features for private, lightweight, and cost-efficient workflows.
 
 ### Local Grammar Check
 
-desC now includes a **local grammar check** feature under **Clause**.
+desC includes a **local grammar check** feature under **Clause**.
 
-The grammar checker runs on your device, so text can be checked locally without needing to send it to an external API.
+The grammar checker runs on your device, so documents can be checked locally without sending text to an external API.
+
+This is useful for:
+
+- Secret documents
+- Long reports
+- Business clauses
+- Work notes
+- Private drafts
+- Large documents
+- Offline writing workflows
 
 Local grammar model:
 
@@ -44,6 +165,24 @@ Approximate size:
 ```text
 300 MB
 ```
+
+---
+
+### Local Codebase and Document Assistant
+
+desC provides a lightweight context-aware assistant for code and document folders.
+
+It can help you:
+
+- Search across project files
+- Understand confusing project settings
+- Ask vague questions across large codebases
+- Find where features are implemented
+- Summarize document folders
+- Generate explanations and documentation
+- Reduce unnecessary external API usage
+
+desC is being tested on vague search tasks across large codebases with multiple confusing settings. In many cases, desC can identify the correct answer locally without exhausting a hosted provider API such as Groq.
 
 ---
 
@@ -71,9 +210,9 @@ Approximate memory usage when using the on-device desC model:
 
 desC is designed to make small local models practical.
 
-By combining a lightweight on-device LLM with contextual search, local reasoning, and focused assistant modes, desC can provide useful code and document assistance without requiring a large model or high-end hardware.
+By combining a lightweight on-device LLM with contextual search, local reasoning, grammar checking, and focused assistant modes, desC can provide useful code and document assistance without requiring a large model or high-end hardware.
 
-This means you can use local AI features for many everyday workflows while keeping the setup lightweight.
+This makes desC useful for everyday local AI workflows, especially when privacy, cost, and simplicity matter.
 
 ---
 
@@ -89,23 +228,43 @@ You can also connect desC to external providers such as:
 
 Using an external LLM can improve speed and reasoning quality, especially for larger projects or more complex questions.
 
+desC can still help reduce unnecessary API usage by performing local search and local context preparation before relying on hosted inference.
+
 ---
 
 ## Codebase Search Improvements
 
-desC no longer requires traditional codebase indexing for search.
+desC no longer depends on traditional remote indexing for codebase search.
 
-Instead, desC improves local on-device codebase reasoning so that it can search, inspect, and reason over project files more directly.
+Instead, desC improves local on-device codebase reasoning so it can search, inspect, and reason over project files more directly.
 
-This helps reduce unnecessary API calls when a user has an LLM API configured.
+This is especially useful when:
 
-For example, desC is being tested on vague search tasks across large codebases with multiple confusing settings. In these cases, desC can often identify the correct answer locally without exhausting the Groq API.
+- A project is large
+- Settings are spread across multiple files
+- The question is vague
+- There are multiple confusing configurations
+- You want to avoid wasting hosted API calls
+
+Example:
+
+```text
+Find the setting that controls the landing page behavior.
+```
+
+```text
+Why does this page render differently in production?
+```
+
+```text
+Where is the upload limit configured?
+```
 
 ---
 
 ## Image Support
 
-desC now includes support for image-based on-device workflows.
+desC includes support for image-based on-device workflows.
 
 Image support depends on your machine capability and the local model configuration available on your system.
 
@@ -115,7 +274,7 @@ Image support depends on your machine capability and the local model configurati
 
 The installation process has been improved to follow each operating system’s standard installation flow.
 
-There is no longer a need for manual copy-and-install steps.
+No more manual copy-and-install process.
 
 Supported packages:
 
@@ -154,55 +313,6 @@ Please make sure you have:
 - Time for the first startup download to complete
 
 > Do not close the app during the initial model download.
-
----
-
-## Screenshots
-
-<table>
-  <tr>
-    <td width="33%">
-      <h3 align="center">Chat</h3>
-      <img src="preview/desC.jpeg" alt="Chat screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Chat Server Settings</h3>
-      <img src="preview/desC-setting.jpeg" alt="Chat server settings screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Pinned Window</h3>
-      <img src="preview/desC-pinned.jpeg" alt="Pinned window screenshot" width="100%">
-    </td>
-  </tr>
-  <tr>
-    <td width="33%">
-      <h3 align="center">Code Settings</h3>
-      <img src="preview/desC-Code-setting.jpeg" alt="Code settings screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Project-Aware HTML Generation</h3>
-      <img src="preview/desC-Code-generating.jpeg" alt="Generating HTML from a project screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Clause Grammar Settings</h3>
-      <img src="preview/grammar-settings.png" alt="Clause grammar settings screenshot" width="100%">
-    </td>
-  </tr>
-  <tr>
-    <td width="33%">
-      <h3 align="center">Grammar Results</h3>
-      <img src="preview/grammar-results.png" alt="Grammar results screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Code on Foreign Language</h3>
-      <img src="preview/exp-landing.png" alt="Landing page example screenshot" width="100%">
-    </td>
-    <td width="33%">
-      <h3 align="center">Code Assistant</h3>
-      <img src="preview/code-results.png" alt="On-device assistant screenshot" width="100%">
-    </td>
-  </tr>
-</table>
 
 ---
 
@@ -484,6 +594,7 @@ You can use it to:
 - Review corrected sentences
 - Improve written clauses or paragraphs
 - Work without sending text to an external provider
+- Process large private documents without paying for grammar APIs
 
 The grammar checker runs on your device using the local grammar model.
 
@@ -566,6 +677,7 @@ Approximate memory usage:
 
 These models are useful for:
 
+- Reliable local assistant workflows
 - Local chat
 - Grammar checking
 - Coding assistance
